@@ -14,6 +14,7 @@
 		D939B0882B18F7FD008095BE /* sdk_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939B0872B18F7FD008095BE /* sdk_demoTests.swift */; };
 		D939B0922B18F7FD008095BE /* sdk_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939B0912B18F7FD008095BE /* sdk_demoUITests.swift */; };
 		D939B0942B18F7FD008095BE /* sdk_demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D939B0932B18F7FD008095BE /* sdk_demoUITestsLaunchTests.swift */; };
+		D939B0A22B18F991008095BE /* alloy-codeless-lite-ios in Frameworks */ = {isa = PBXBuildFile; productRef = D939B0A12B18F991008095BE /* alloy-codeless-lite-ios */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		D939B08D2B18F7FD008095BE /* sdk_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sdk_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D939B0912B18F7FD008095BE /* sdk_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdk_demoUITests.swift; sourceTree = "<group>"; };
 		D939B0932B18F7FD008095BE /* sdk_demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sdk_demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D94C25832B19152600EBF807 /* sdk-demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "sdk-demo-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D939B0A22B18F991008095BE /* alloy-codeless-lite-ios in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D93627942B19034B0032EBF2 /* alloy-codeless-lite-ios */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "alloy-codeless-lite-ios";
+			sourceTree = "<group>";
+		};
 		D939B0692B18F7FA008095BE = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +105,10 @@
 		D939B0742B18F7FA008095BE /* sdk_demo */ = {
 			isa = PBXGroup;
 			children = (
+				D94C25832B19152600EBF807 /* sdk-demo-Info.plist */,
 				D939B0752B18F7FA008095BE /* sdk_demoApp.swift */,
 				D939B0772B18F7FA008095BE /* ContentView.swift */,
+				D93627942B19034B0032EBF2 /* alloy-codeless-lite-ios */,
 				D939B0792B18F7FC008095BE /* Assets.xcassets */,
 				D939B07B2B18F7FC008095BE /* sdk_demo.entitlements */,
 				D939B07C2B18F7FC008095BE /* Preview Content */,
@@ -145,6 +157,9 @@
 			dependencies = (
 			);
 			name = sdk_demo;
+			packageProductDependencies = (
+				D939B0A12B18F991008095BE /* alloy-codeless-lite-ios */,
+			);
 			productName = sdk_demo;
 			productReference = D939B0722B18F7FA008095BE /* sdk_demo.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +232,9 @@
 				Base,
 			);
 			mainGroup = D939B0692B18F7FA008095BE;
+			packageReferences = (
+				D939B0A02B18F991008095BE /* XCRemoteSwiftPackageReference "alloy-codeless-lite-ios" */,
+			);
 			productRefGroup = D939B0732B18F7FA008095BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -422,6 +440,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sdk_demo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "sdk-demo-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need this for document collection";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -432,7 +456,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -458,6 +482,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"sdk_demo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "sdk-demo-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) Need this for document collection";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -468,7 +498,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -609,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D939B0A02B18F991008095BE /* XCRemoteSwiftPackageReference "alloy-codeless-lite-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/UseAlloy/alloy-codeless-lite-ios.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D939B0A12B18F991008095BE /* alloy-codeless-lite-ios */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D939B0A02B18F991008095BE /* XCRemoteSwiftPackageReference "alloy-codeless-lite-ios" */;
+			productName = "alloy-codeless-lite-ios";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D939B06A2B18F7FA008095BE /* Project object */;
 }

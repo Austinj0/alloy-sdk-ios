@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "alloy-codeless-lite-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/UseAlloy/alloy-codeless-lite-ios.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1542fec6b79cc90331c910e71a9bc67f7588e9b1"
+      }
+    }
+  ],
+  "version" : 2
+}
